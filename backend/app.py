@@ -6,7 +6,7 @@ from services.gemini_service import GeminiService
 import numpy as np
 import cv2
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3001"}})
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
 
 gemini_service = GeminiService()
 
