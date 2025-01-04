@@ -6,9 +6,16 @@ from services.gemini_service import GeminiService
 import numpy as np
 import cv2
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:3001"}})
 
 gemini_service = GeminiService()
+
+@app.after_request
+def add_header(response):
+    response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '-1'
+    return response
 
 @app.route('/api/auth/spotify', methods=['GET'])
 def get_spotify_auth():

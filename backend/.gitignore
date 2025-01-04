@@ -1,14 +1,14 @@
 config/__pycache__/
 venv/
 __pycache__/
-.cache/
+.cache
 python.py
 .env
 # Virtual Environment
 venv/
 env/
 ENV/
-
+backend/.cache/
 # Python
 __pycache__/
 *.py[cod]
@@ -30,6 +30,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+backend\.cache
 
 # Environment variables
 .env

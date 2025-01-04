@@ -29,9 +29,15 @@ export default function SpotifyPlaylistGenerator() {
 
   useEffect(() => {
     const token = localStorage.getItem('spotify_access_token');
+    console.log("Token in localStorage:", token ? "exists" : "none"); // Debug log
+    
     if (token) {
       setAccessToken(token);
       setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+      // Instead of redirecting, show login state
+      console.log("No token found, user needs to login");
     }
   }, []);
 
@@ -43,6 +49,13 @@ export default function SpotifyPlaylistGenerator() {
     } catch (err) {
       setError('Failed to initialize login. Please try again.');
     }
+  };
+
+  const logout = () => {
+    localStorage.removeItem('spotify_access_token');
+    sessionStorage.clear();
+    // Clear other cache if needed
+    router.push('/');
   };
 
   const generateSongs = async () => {
@@ -196,7 +209,7 @@ export default function SpotifyPlaylistGenerator() {
                       {songs.map((song) => (
                         <div 
                           key={song.id} 
-                          className="flex items-center justify-between p-3 bg-gray-100 rounded"
+                          className="flex items-center justify-between p-3 font-bold text-gray-800"
                         >
                           <div className="flex items-center gap-2">
                             <Music className="w-5 h-5" />

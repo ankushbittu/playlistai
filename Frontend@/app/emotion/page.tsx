@@ -312,7 +312,7 @@ export default function EmotionPlaylistGenerator() {
                   {songs.map((song) => (
                     <div 
                       key={song.id} 
-                      className="flex items-center justify-between p-3 bg-gray-100 rounded"
+                      className="flex items-center justify-between p-3 font-bold text-gray-800"
                     >
                       <div className="flex items-center gap-2">
                         <Music className="w-5 h-5" />
