@@ -3,6 +3,7 @@
 ## Description
 EmotionalBeats is an innovative application that combines emotion recognition technology with music curation to create personalized Spotify playlists using llms. By analyzing facial expressions through advanced computer vision and deep learning techniques, the application generates playlists that match your current emotional state, preferred language, and artist preferences.
 
+![alt text](<Screenshot 2025-01-15 201831.png>)
 
 ## Features
 - Real-time emotion detection through webcam
@@ -46,6 +47,7 @@ EmotionalBeats is an innovative application that combines emotion recognition te
  - Jawline edges
 - Coordinate extraction for feature analysis
 
+
 #### Feature Extraction
 1. Geometric Features:
   - Eye Aspect Ratio (EAR)
@@ -62,6 +64,13 @@ EmotionalBeats is an innovative application that combines emotion recognition te
 - Pre-trained machine learning model
 - Support for multiple emotion classes
 - Trained on extensive facial expression dataset
+
+#### Work flow
+![alt text](synthetic_data_aws_flow-2025-01-15-225241.png)
+
+#### deatail info check medium page
+[Medium page](https://medium.com/@ankushreddy281/playlistai-bridging-your-emotions-and-music-with-ai-1bc4e8b87fa7)
+
 
 ## Setup Instructions
 
